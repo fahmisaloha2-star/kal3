@@ -10,12 +10,16 @@ export type ProjectCategory =
 export interface Project {
   id: string;
   title: string;
+  title_en?: string;
   category: ProjectCategory | string;
+  category_en?: string;
   location: string;
+  location_en?: string;
   year: number;
   images: string[];
   thumbnails?: string[];
   description: string;
+  description_en?: string;
   featured: boolean;
   published: boolean;
   order: number;
@@ -25,7 +29,9 @@ export interface Service {
   id: string;
   iconName: string;
   title: string;
+  title_en?: string;
   description: string;
+  description_en?: string;
   order: number;
 }
 
@@ -33,7 +39,9 @@ export interface Testimonial {
   id: string;
   name: string;
   project: string;
+  project_en?: string;
   text: string;
+  text_en?: string;
   rating: number;
   order?: number;
 }
@@ -41,7 +49,9 @@ export interface Testimonial {
 export interface FaqItem {
   id: string;
   question: string;
+  question_en?: string;
   answer: string;
+  answer_en?: string;
   order: number;
 }
 
