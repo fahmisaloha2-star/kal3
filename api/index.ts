@@ -12,6 +12,7 @@ import contentRoutes from "../routes/content";
 import contactRoutes from "../routes/contact";
 import sitemapRoutes from "../routes/sitemap";
 import robotsRoutes from "../routes/robots";
+import uploadRoutes from "../routes/upload";
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.use("/api/testimonials", testimonialsRoutes);
 app.use("/api/faqs", faqsRoutes);
 app.use("/api/content", contentRoutes);
 app.use("/api/contact", contactLimiter, contactRoutes);
+app.use("/api/upload", uploadRoutes);
 app.use("/sitemap.xml", sitemapRoutes);
 app.use("/robots.txt", robotsRoutes);
 
